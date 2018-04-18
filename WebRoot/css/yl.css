@@ -1,0 +1,374 @@
+/*@media (max-width: 991px){
+	.cntA .cntBack .cntText1 .cntText2 .copyicon .copytext{
+		width: 0px;
+		height: 0px;
+		font-size: 0px;
+	}
+	.cntA{
+		height: 200px;
+	}
+}*/
+a:link,a:visited{color:#222;text-decoration:none;}
+
+
+.tttitle{
+	transition:all 0.2s;
+	cursor:pointer;
+}
+.tttitle:hover{
+	color: #0088ee;
+}
+.tttime{
+	display: inline-block;
+	float: right;
+}
+.moreA{
+	transition:all 0.2s;
+}
+.moreA:hover{
+	color: #0088ee;
+}
+.moreA:hover span{
+	transform:rotate(360deg);
+}
+
+.copytext{
+	font-weight:bold;
+}
+
+.cntA{
+	height:300px;
+	position:relative;
+	overflow:hidden;
+	cursor:pointer;
+	display: inline-block;
+}
+.cntA img{
+	max-height:300px;
+	position: absolute;width: 100%;
+}
+.cntText1,.cntText2{
+	width:290px;
+	position:absolute;
+	text-align:center;
+	cursor:pointer;
+	display: inline-block;
+}
+.cntText1{
+	left:-300px;
+	top:70px;
+	font-size:40px;
+	color:#444;
+	transition:all 0.2s;
+}
+.cntText2{
+	right:-300px;
+	top:120px;
+	font-size:30px;
+	color:#222;
+	transition:all 0.2s;
+}
+.cntBack{
+	position: absolute;
+	width: 290px;
+	height: 300px;
+	background-color: rgba(222, 0, 90, 0.0);
+	transition: all 0.3s;
+}
+.cntA:hover .cntBack{
+	background-color: rgba(222, 0, 90, 0.2);
+}
+.cntA:hover .cntText1{
+	transition-delay:0.1s;
+	left:0px;
+}
+.cntA:hover .cntText2{
+	transition-delay:0.1s;
+	right:0px;
+}
+
+.logoOBO{
+	color:#31B0D5;
+	width: 100%;
+	font-size: 100px;
+	margin-bottom: 50px;
+}
+
+.titleOBO{
+	color:#FFFFFF;
+	width: 100%;
+	font-size: 30px;
+}
+.titleOBO.animated{
+	animation-delay:1s;
+}
+.typewrite.animated{
+	animation-delay:2.2s;
+}
+.wrap{
+	color: #fff;
+}
+.typewrite{
+	color: #fff;
+	width: 100%;
+	font-size: 50px;
+}
+.labelOBO{
+	margin-top: 40px;
+}
+.labelOBO.animated{
+	animation-delay:4s;
+}
+.moreOBO{
+	font-size: 16px;
+	position: absolute;
+	bottom: 10px;
+	left: 50%;
+	width: 120px;
+	margin-left: -60px;
+	color: #fff;
+}
+.moreOBO.animated{
+	animation-delay:5s;
+}
+.tipOBO{
+	font-size: 15px;
+	color:#ff9b00;
+}
+
+@media (min-width: 1200px){
+	.cntA{
+		height:300px;
+	}
+	.cntA img{
+		max-height:300px;
+	}
+	.cntText1,.cntText2{
+		width:290px;
+	}
+	.cntText1{
+		left:-300px;
+	}
+	.cntText2{
+		right:-300px;
+	}
+	.cntBack{
+		width: 290px;
+		height: 300px;
+	}
+	
+}
+@media (max-width: 1199px){
+	.cntA{
+		height:100px;
+	}
+	.cntA img{
+		max-height:100px;
+	}
+	.cntText1,.cntText2{
+		width:100px;
+	}
+	.cntText1{
+		left:-130px;
+	}
+	.cntText2{
+		right:-130px;
+	}
+	.cntBack{
+		width: 100px;
+		height: 100px;
+	}
+	.logoOBO{
+		font-size: 60px;
+	}
+	.titleOBO{
+		font-size: 20px;
+	}
+	.textOBO{
+		font-size: 40px;
+	}
+}
+
+@media (max-width: 767px){
+	.textOBO{
+		font-size: 24px;
+	}
+}
+@media (max-width: 359px){
+	.textOBO{
+		font-size: 20px;
+	}
+}
+
+
+
+
+
+
+.yl-nav-input{
+	/*background: #444444;
+	color: #9d9d9d;*/
+	border: none;
+}
+.yl-nav-form{
+	position: relative;
+}
+.yl-nav-button{
+	position: absolute;
+	top: 35%;
+	right: 20px;
+	border: none;
+	background: none;
+}
+
+input:focus{
+			outline: none;
+		}
+	
+		.hide{
+			font: 0/0 a;
+    		color: transparent;
+    		text-shadow: none;
+    		background-color: transparent;
+    		border: 0;
+		}
+		.clearfix:before{
+			content: '';
+			display: table;
+		}
+		
+		.form{
+			float: none;
+			margin: auto;
+			text-align: left;
+			width: 100%;
+		}
+		.form .group{
+			padding: 1px 0;
+    		border: 1px solid #d5d5d5;
+    		border-radius: 3px;
+		}
+		.form .group .group-con{
+			position: relative;
+    		margin: 0;
+    		overflow: hidden;
+		}
+		.group-con{
+			height: 50px;
+		}
+		.form .group .group-con input{
+			padding: 1em 1em;
+    		box-sizing: border-box;
+    		border: 0;
+    		border-radius: 0;
+    		box-shadow: none;
+    		background: rgba(255,255,255,0.8);
+    		font-family: 'Microsoft Yahei';
+    		color: #666;
+    		position: relative;
+		}
+		.con{
+			width:100%;
+		}
+		.password, .repassword ,.user, .verify{
+			border-top: 1px solid #e8e8e8;
+		}
+		
+		.button{
+			margin-top:18px; 
+		}
+		.button_s{
+			width: 100%;
+			background: #0f88eb;
+    		box-shadow: none;
+    		border: 0;
+    		border-radius: 3px;
+    		line-height: 41px;
+    		color: #fff;
+    		display: block;
+    		font-size: 15px;
+    		cursor: pointer;
+    		font-family: 'Microsoft Yahei';
+		}
+		.button_s:hover{
+			background: #80c3f7;
+		}
+		.remember{
+			margin-top: 10px;
+			line-height: 30px;
+		}
+		.remember label{
+			display: block;
+		}
+		.remember-me{
+			font-size: 14px;
+			float: left;
+			position: relative;
+			cursor: pointer;
+			color: #666;
+		}
+	
+		
+		
+		.forgot-password{
+			float: right;
+			font-size: 14px;
+		}
+		.forgot-password a{
+			color: #666;
+		}
+		.forgot-password a:hover{
+			text-decoration: underline;
+		}
+		.chackCode{
+			width: 156px;
+			float:left;
+		}
+		.chackImg{
+			display:inline-block;
+			margin-top:4px;
+			margin-right:2px;
+			width:140px;
+			height:40px;
+			float:right;
+			cursor:pointer;
+		}
+		.message{
+			color:#f00;
+			font-size: 12px;
+			margin-left: 10px;
+			margin-top: 2px;
+			margin-bottom: 2px;
+		}
+
+
+@media (min-width:768px ) {
+	.yl-nav-button{
+		top: 25%;
+	}
+}
+
+
+.leftside{
+	    z-index: 1000;
+    position: fixed;
+    height: 250px;
+    bottom: 0px;
+    width: 50px;
+    right: 0;}
+.leftside a{
+	overflow: hidden;
+    display: block;
+    margin-bottom: 4px;
+    padding-top: 2px;
+    width: 50px;
+    height: 50px;
+    border-radius:4px;
+    text-align: center;
+    color: #666;
+    border: 1px solid #e5e9ef;
+    background: #f6f9fa;
+}
+.leftside a:hover{
+	color:#fff;
+	background-color:#13aadc}

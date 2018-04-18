@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>斗图帮-专业斗图网</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" >
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+		<link rel="stylesheet" href="css/yl.css" />
+		<link rel="stylesheet" href="css/other.css" />
+		<script type="text/javascript" src="js/jquery-2.1.4.min.js" ></script>
+		<script type="text/javascript" src="js/bootstrap.min.js" ></script>
+		<script type="text/javascript" src="js/textOneByOne.js" ></script>
+		<script type="text/javascript" src="js/other.js" ></script>
+	</head>
+	<body>
+			<section class="slide-wrapper">
+        <div class="container">
+            <div id="myCarousel" class="carousel slide">
+                <div class="carousel-inner">
+                    <div class="item item1 active">
+                        <div class="fill" style=" background-image:url(imgs/7.jpg);">
+                            <div class="inner-content">
+                            	<h4 class="logoOBO text-center">斗图帮</h4>
+                            	<h3 class="titleOBO text-center">斗图，一个网站就够了</h3>
+                            	<h1 class="typewrite text-center textOBO" data-period="2000" data-type='[ "上万图片，尽情斗图.", "套路组图，玩转聊天.","单击复制，快捷斗图.","图片投稿，分享才能."]'>
+									<span class="wrap">我们有...</span>
+								</h1>
+								<label class="center-block text-center labelOBO">
+									<a class="btn btn-info btn-lg" href="index.action">开始装逼 <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+								</label>
+								<h3 id="tip" class="tipOBO text-center"><span class="glyphicon glyphicon-info-sign"></span> 你现在是移动端访问，暂不支持复制图片功能!</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+    	 $(function() {
+		    /*var wid=document.documentElement.clientWidth;
+			if(wid>991){
+				$("#tip").remove();
+			}*/
+			if(navigator.platform.indexOf('Win32')!=-1){ 
+		    	$("#tip").remove();
+		     }
+
+		  });
+    </script>
+    <script>
+    
+</script>
+	</body>
+</html>

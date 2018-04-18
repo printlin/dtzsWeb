@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="ImgBeanName">
+	<resultMap type="bean.ImgBean" id="ImgBeanMap">
+		<id property="iid" column="iid"/>
+		<result property="src" column="src"/>
+		<result property="alt" column="alt"/>
+		<result property="looktimes" column="looktimes"/>
+		<result property="tag" column="tag"/>
+		<result property="upid" column="upid"/>
+		<result property="tid" column="tid"/>
+	</resultMap>
+	<select id="findByPage" resultMap="ImgBeanMap">
+		select iid,src,alt,looktimes,tag,upid,tid from imginfo where tid is null ORDER BY iid DESC limit #{begin},#{length}
+	</select>
+
+	
+	<select id="findByKeywordAndPage" resultMap="ImgBeanMap">
+		select iid,src,alt,looktimes,tag,upid,tid from imginfo where alt like #{keyword} and tid is null ORDER BY iid DESC limit #{begin},#{length}
+	</select>
+	
+	<select id="findTtByPage" resultType="Map">
+		SELECT tt.tid,tt.title,tt.tid,img.src,img.alt,img.tag,up.uptime,us.username FROM ttinfo tt
+			INNER JOIN imginfo img ON tt.`tid`=img.`tid`
+			INNER JOIN uploadinfo up ON tt.`upid`=up.`upid`
+			INNER JOIN userinfo us ON up.`uid`=us.`uid`
+			WHERE img.tid IN(
+				SELECT t.tid FROM (
+					SELECT tid FROM ttinfo ORDER BY tid DESC LIMIT #{begin},#{length}
+				) t
+			) ORDER BY img.tid DESC
+	</select>
+	
+	<select id="findTtByKeywordAndPage" resultType="Map">
+		SELECT tt.tid,tt.title,tt.tid,img.src,img.alt,img.tag,up.uptime,us.username FROM ttinfo tt
+			INNER JOIN imginfo img ON tt.`tid`=img.`tid`
+			INNER JOIN uploadinfo up ON tt.`upid`=up.`upid`
+			INNER JOIN userinfo us ON up.`uid`=us.`uid`
+			WHERE img.tid IN(
+				SELECT t.tid FROM (
+					SELECT tid FROM ttinfo WHERE title like #{keyword} ORDER BY tid DESC LIMIT #{begin},#{length}
+				) t
+			) ORDER BY img.tid DESC
+	</select>
+	
+	<select id="findByTtId" resultMap="ImgBeanMap">
+		select iid,src,alt,looktimes,tag,upid,tid from imginfo where tid=#{tid}
+	</select>
+	
+	<select id="countImg" resultType="int">
+		select count(*) nub from imginfo
+	</select>
+	
+	<select id="countImgTt" resultType="int">
+		select count(*) nub from ttinfo
+	</select>
+	
+	<select id="countImgByKey" resultType="int">
+		select count(*) nub from imginfo where alt like #{keyword}  and tid is null
+	</select>
+	
+	<insert id="addImg" parameterType="bean.ImgBean">
+		insert into imginfo(src,alt,looktimes,tag,upid,tid) value(#{src},#{alt},#{looktimes},#{tag},#{upid},#{tid})
+	</insert>
+	
+	<insert id="addTtImg" parameterType="bean.TtImgBean">
+		insert into ttinfo(tid,title,tag,downloadtimes,looktimes,upid) value(#{tid},#{title},#{tag},#{downloadtimes},#{looktimes},#{upid})
+	</insert>
+	
+	<insert id="addUpload" parameterType="bean.UploadBean">
+		insert into uploadinfo(upid,uptime,uptype,state,uid) value(#{upid},#{uptime},#{uptype},#{state},#{uid})
+	</insert>
+	
+</mapper>
+

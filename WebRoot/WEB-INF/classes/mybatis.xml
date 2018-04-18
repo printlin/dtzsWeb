@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+
+<configuration>
+	<!-- 
+	<environments default="mysql_developer">
+	
+		<environment id="mysql_developer">
+		
+			<transactionManager type="jdbc"/>	
+	
+			<dataSource type="pooled">
+				<property name="driver" value="com.mysql.jdbc.Driver"/>
+				<property name="url" value="jdbc:mysql://127.0.0.1:3306/dtimgs"/>
+				<property name="username" value="root"/>
+				<property name="password" value="123456"/>
+			
+			</dataSource>
+			
+		</environment>
+	
+	</environments> -->
+
+	<mappers>
+		
+		<mapper resource="dao/ImgBeanMapper.xml"/>
+		<mapper resource="dao/AdminMapper.xml"/>
+		<mapper resource="dao/UserMapper.xml"/>
+		<mapper resource="dao/TtinfoMapper.xml"/>
+		<mapper resource="dao/MessageInfoBeanMapper.xml"/>
+	</mappers>
+	
+
+</configuration>
