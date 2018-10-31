@@ -17,7 +17,7 @@
 ## 爬虫结构
 ![](https://github.com/printlin/images/blob/master/dtzs/repit.png "爬虫结构")
 ## 爬虫性能
-![](https://github.com/printlin/images/blob/master/dtzs/repitData.png "爬虫性能")
+![](https://github.com/printlin/images/blob/master/dtzs/repitData.jpg "爬虫性能")
 
 ## 心得总结
 将大一写的图片爬虫引擎迁移到JavaWeb中，使用B/S架构进行图片展示。在这个过程中让我对JavaWeb编程有了更加深入的领会，特别是过滤器、监听器还有前端图片懒加载等关键技术，也让我更加注重编程中的一些细节问题与性能优化。第一次使用Spring的文件上传功能，极大程度的减轻了编码复杂度。本项目可以说是我人生中的关键一步，我带着项目走入校级赛场，走入市级赛场，并取得了不错的成绩。
