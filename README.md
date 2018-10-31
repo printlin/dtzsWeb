@@ -14,9 +14,9 @@
 
 ## 整体结构
 ![](https://github.com/printlin/images/blob/master/dtzs/framework.png "整体架构")
-
 ## 爬虫结构
 ![](https://github.com/printlin/images/blob/master/dtzs/repit.png "爬虫结构")
+## 爬虫性能
 ![](https://github.com/printlin/images/blob/master/dtzs/repitData.png "爬虫性能")
 
 ## 心得总结
